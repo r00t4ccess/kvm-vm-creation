@@ -1,0 +1,1 @@
+virt-install --name ${1} --memory 4096 --vcpus 2 --disk path=/mnt/storage/vms/${1}.qcow,size=20,format=qcow2 --location 'ftp://collector.2lc4.com/centos/7/os/x86_64/'  --os-variant rhel7 --network network:macvtap-team,model=virtio --extra-args "ks=ftp://collector.2lc4.com/ISOS/anaconda/chefserver.cfg hostname=${1}"
